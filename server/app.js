@@ -9,11 +9,13 @@ app.use(
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
   })
 );
 
 app.get("/", (req, res) => res.send("Index Route"));
 app.get("/getting", (req, res) => res.send("Getting Routes"));
 
-app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`));
+app.listen(process.env.PORT, (req, res) => {
+     console.log(`Server running on port ${process.env.PORT}`)
+     return res.send("Index Routing Home")
+});
