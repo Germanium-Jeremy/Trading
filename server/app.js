@@ -12,6 +12,7 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => res.send("Index route for our chat app .."));
+app.get("/", (req, res) => res.send("Index route"));
+app.get("/getting", (req, res) => res.send("Getting routes"));
 
 module.exports = app;
